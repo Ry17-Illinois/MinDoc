@@ -3,7 +3,7 @@
 ## Files to Edit
 
 ### Main Content
-**Edit:** `index.markdown`
+**Edit:** `content.md`
 - Contains all page content in one file
 - Use `# Header` for main sections
 - Write content in standard markdown
@@ -32,7 +32,7 @@ order: 1
 ```
 
 ### 3. Reference in Content
-Add to `index.markdown` where you want the image:
+Add to `content.md` where you want the image:
 ```liquid
 {% assign media = site.mindoc_media | where: "page", "section-name" %}
 {% include media.html pages=media %}
