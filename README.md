@@ -3,7 +3,7 @@
 ## Files to Edit
 
 ### Main Content
-**Edit:** `index.md`
+**Edit:** `index.markdown`
 - Contains all page content in one file
 - Use `# Header` for main sections
 - Write content in standard markdown
