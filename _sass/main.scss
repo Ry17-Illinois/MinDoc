@@ -9,33 +9,41 @@ body, html {
   font-family: "Oswald";
 }
 
+// Header
+
+.header {
+  text-align: center;
+  padding: 40px 20px 20px 20px;
+  border-bottom: 2px solid #476345;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-family: "Calibri";
+  font-size: 48px;
+  color: #476345;
+  margin-bottom: 10px;
+  border-bottom: none;
+}
+
+.header p {
+  font-family: "Calibri";
+  font-size: 24px;
+  color: #666;
+  margin-top: 0;
+}
+
+.header a {
+  color: #476345;
+  text-decoration: none;
+}
+
 // Single Page Layout
 
 .single-page-content {
   max-width: 800px;
   margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.title-section {
-  text-align: center;
-  margin-bottom: 60px;
-  padding: 40px 0;
-  border-bottom: 2px solid #476345;
-}
-
-.main-title {
-  font-family: "Calibri";
-  font-size: 48px;
-  color: #476345;
-  margin-bottom: 10px;
-}
-
-.main-subtitle {
-  font-family: "Calibri";
-  font-size: 24px;
-  color: #666;
-  margin-top: 0;
+  padding: 0 20px 40px 20px;
 }
 
 
