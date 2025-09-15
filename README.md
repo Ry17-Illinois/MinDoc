@@ -1,4 +1,12 @@
 # MinDocMini - Single Page Setup
+MinDocMini is a minimal computing platform for creating your own digital documentary editions. It makes it easy to quickly deploy a simple web page where you can display images of and text about your documentary material.
+
+This ReadMe is meant to walk you through setting up your own digitial edition in a step by step fashion.
+This ReadMe assumes that you do not have experience with github. If you are already familiar with GitHub you might skip some steps.
+
+## MinDocMini Setup
+
+1. <AM CURRENTLY EDITING>
 
 ## Files to Edit
 
