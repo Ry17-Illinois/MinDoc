@@ -17,9 +17,12 @@ This ReadMe assumes that you do not have experience with github. If you are alre
 
 5. Click "Create Repository"
    You should now have a repository attached to your GitHub account.
+<img width="356" height="336" alt="image" src="https://github.com/user-attachments/assets/d8e095ca-4534-4730-82e2-0e467fc3ec93" />
+
+**After this point you should work from your new repository**
 
 6. Go to the Settings Tab and Choose 'Pages.' Set the site to Deploy from Main Branch.
-<img width="356" height="336" alt="image" src="https://github.com/user-attachments/assets/d8e095ca-4534-4730-82e2-0e467fc3ec93" />
+
 
 7. Return to this page 
 
