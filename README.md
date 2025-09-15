@@ -9,7 +9,8 @@ This ReadMe assumes that you do not have experience with github. If you are alre
 1. Sign up for GitHub. You can sign up on this page by selecting the Sign Up button at the top of the page.
 
 2. Establish a Repository with your Copy of MinDocMini in it.
-   Click on the big green button at the top right of this screen that reads "Use this template." It will provide you with two options. Choose "Create a New Repository" and move on to the next step.
+   Click on the big green button at the top right of this screen that reads "Use this template." <img width="209" height="59" alt="image" src="https://github.com/user-attachments/assets/5b3fd054-33c7-421f-899f-1083ce44a9e6" />
+ It will provide you with two options. Choose "Create a New Repository" and move on to the next step.
 
 3. Choose a name for your repository. A simple name is best.
 
