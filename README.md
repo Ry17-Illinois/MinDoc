@@ -6,7 +6,19 @@ This ReadMe assumes that you do not have experience with github. If you are alre
 
 ## MinDocMini Setup
 
-1. <AM CURRENTLY EDITING>
+1. Sign up for GitHub. You can sign up on this page by selecting the Sign Up button at the top of the page.
+
+2. Establish a Repository with your Copy of MinDocMini in it.
+   Click on the big green button at the top right of this screen that reads "Use this template." It will provide you with two options. Choose "Create a New Repository" and move on to the next step.
+
+3. Choose a name for your repository. A simple name is best.
+
+4. Click "Create Repository"
+   You should now have a repository attached to your GitHub account.
+
+5. Go to the Settings Tab and Choose 'Pages.' Set the site to Deploy from Main Branch.
+
+6. 
 
 ## Files to Edit
 
