@@ -1,5 +1,5 @@
 ---
-page: introduction
+page: source
 title: Image_№2_from_Introduction
 media_type: image
 
