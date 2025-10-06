@@ -1,0 +1,57 @@
+{%- comment -%}
+Usage example in a page:
+  {% assign media = site.mindoc_media | where: "page", "section-name" | sort: "order" %}
+  {% include media_next.html pages=media %}  <-- drops the next one here
+  ...paragraph...
+  {% include media_next.html pages=media %}  <-- drops the next one here
+{%- endcomment -%}
+
+{%- assign media = include.pages | default: empty -%}
+{%- if media and media.size > 0 -%}
+
+  {%- comment -%}
+  Use a page-scoped counter so each call shows the next item.
+  NOTE: The counter name is static. If you need multiple independent
+  streams on the same page, make a second include that uses a different
+  increment name (e.g., media_index_b), or duplicate this file with a new name.
+  {%- endcomment -%}
+  {%- capture _i -%}{% increment media_index %}{%- endcapture -%}
+  {%- assign i = _i | plus: 0 -%}
+
+  {%- assign element = media[i] -%}
+  {%- if element -%}
+    <main class="main-wrap">
+      <div class="content-wrapper">
+        {%- if element.media_type == 'image' -%}
+          <div class="container">
+            <img
+              src="{% if element._path contains 'assets' %}{{ site.baseurl }}{{ element._path }}{% else %}{{ element._path }}{% endif %}"
+              class="page_image">
+            <div>
+              <div class="description-wrapper">
+                <p>Title: {{ element._title }}<br>
+                Creator: {{ element.creator }}<br>
+                Date: {{ element._date }}</p>
+                <a href="{{ site.baseurl }}{{ element.url }}"><button class="description_btn">Detailed description</button></a>
+              </div>
+            </div>
+          </div>
+        {%- else -%}
+          <div class="container">
+            <iframe
+              src="{% if element._path contains 'assets' %}{{ site.baseurl }}{{ element._path }}{% else %}{{ element._path }}{% endif %}"
+              class="page_image"></iframe>
+            <div>
+              <div class="description-wrapper">
+                <p>Title: {{ element._title }}<br>
+                Creator: {{ element.creator }}<br>
+                Date: {{ element._date }}</p>
+                <a href="{{ site.baseurl }}{{ element.url }}"><button class="description_btn">Detailed description</button></a>
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+    </main>
+  {%- endif -%}
+{%- endif -%}
