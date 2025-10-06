@@ -7,9 +7,9 @@ _title: Apple tree
 description: Main page photo
 creator: Unknown
 _date: Unknown
-rights: 
-type: 
-source:
+rights: CC BY
+type: A photo
+source: somewhere
 identifier:
 contributor:
 format:
