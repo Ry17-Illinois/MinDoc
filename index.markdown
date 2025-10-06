@@ -3,6 +3,7 @@ layout: single_page
 ---
 
 {% assign media = site.mindoc_media | where: "page", "source" | sort: "order" %}
+<p><small>DEBUG: media size = {{media | size}}</small></p>
 
 # Introduction
 
