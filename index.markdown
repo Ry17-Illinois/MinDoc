@@ -15,7 +15,7 @@ Ut scelerisque ultrices orci, nec egestas sem. Cras feugiat nulla eget efficitur
 
 <!--{% assign media = site.mindoc_media | sort: "order" | where_exp: "item", "item.page == 'source'" | where_exp: "item", "item.media_type == 'image'" %}--> 
 
-{% include media.html pages=media %}
+{% include media_next.html pages=media %}
 
 <!--{% assign intro_images = site.mindoc_media | sort: "order" | where_exp: "item", "item.page == 'source'" | where_exp: "item", "item.media_type == 'image'" %}--> 
 <!--{% include media.html pages=intro_images %}-->
