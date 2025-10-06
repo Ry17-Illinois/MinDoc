@@ -2,10 +2,13 @@
 layout: single_page
 ---
 
+{% assign media = site.mindoc_media | where: "page", "section-name" | sort: "order" %}
+
 # Introduction
 
 **Lorem ipsum dolor sit amet, consectetur adipiscing elit.**[^1] Fusce eget condimentum ligula. Vivamus ultricies massa ac arcu ornare, sit amet pellentesque dolor consequat. Aliquam pellentesque ante nunc, ut sollicitudin arcu dapibus mattis. Nullam fermentum condimentum mi, et maximus nisl elementum a. Aenean ac tellus justo. Vivamus iaculis facilisis nunc, ac bibendum enim. Nullam eu convallis lacus. Fusce nulla ex, bibendum nec convallis et, rutrum in ipsum. Phasellus in elementum dolor. Fusce id iaculis dui, a lacinia nunc. In rhoncus fringilla nisi.
 
+{% include media_next.html pages=media %}
 
 Voilà! Вуаля! שלום עולם! Ça va?
 Ut scelerisque ultrices orci, nec egestas sem. Cras feugiat nulla eget efficitur tempus. Morbi at pulvinar odio. Duis tempus neque in efficitur iaculis. Nullam ornare erat ut elit convallis consectetur. Integer a pulvinar dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi semper mattis odio ac volutpat. Suspendisse placerat rhoncus ligula, in pretium turpis aliquam nec. Curabitur gravida pretium mauris, in vulputate mauris tristique in. Suspendisse id facilisis sem, et dapibus tortor. Sed nisl metus, commodo ornare tortor non, aliquam suscipit arcu.[^2]
