@@ -38,7 +38,7 @@ MY WONDEFUL SOURCES part 2
 # Credits and Acknowledgments
 
 # About MinDoc
-MinDoc was created by Liza Senatrova, John Randolph, and Caroline KNess through University of Illinois Urbana-Champaign.
+MinDoc was created by Liza Senatrova, John Randolph, Caroline Kness, and Richard Young through University of Illinois Urbana-Champaign.
 
 [^1]: first footnote 
 [^2]: I copied this text from this [website](https://www.lipsum.com/feed/html) 
