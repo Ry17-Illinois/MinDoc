@@ -61,7 +61,7 @@ order: 1
 Add to `index.md` where you want the image:
 ```liquid
 {% assign media = site.mindoc_media | where: "page", "section-name" %}
-{% include media.html pages=media %}
+{% include media_next.html pages=media %}
 ```
 
 ## Build
