@@ -19,13 +19,13 @@ At bottom, you should include:
 **How to Cite:**
 Here, provide a citation using this model:
 
-> Lastname, Firstname, FirstName LastName, and FirstName, Lastname. “Title of Web Page.” Name of Website. Publishing organization, publication or revision date if available. Access date if no other date is available. URL.
+> Lastname, Firstname, FirstName LastName, and FirstName, Lastname. “Title of Web Page.” Name of Website (if different from web page). Publication or Revision Date. URL.
 
 Your teams have multiple authors.  In scholarship, if authorship is equal across all team members, then the custom is to list by last name them in alphabetical order.  If you wish to deviate from this order you can but that will communicate priority (i.e. that the one who goes first is the 'lead author', etc.).
 
 If you choose and wish to do so, you may also include a Creative Commons license here. We'll discuss those in class.
 
-Here and throughout your edition, you should use footnotes in Chicago Notes and Bibliography style.[^1]  Please note that if sources are listed in your bibliography (and all your main ones should be), you may use a shortened form in these notes. (e.g. Smith, _Towards a Better Understanding_, 5, with the full citation to Smith going in the bibliography.
+Here and throughout your edition, you should use footnotes in Chicago Notes and Bibliography style.[^1]  Please note that if sources are listed in your bibliography (and all your main ones should be), you may use a shortened form in these notes (e.g. Smith, _Towards a Better Understanding_, 5, with the full citation to Smith going in the bibliography).
 
 # The Source
 
@@ -54,7 +54,7 @@ The target length of this section is about 1000 words, exclusive of notes. It sh
 
 # About this Edition
 
-This section should how you created this edition. It helps satisfy the last of the ADE’s criteria, by providing an explanation of your editorial principles and explaining to readers just how you produced the copy of the source presented here.
+This section should state the principles and choices that guided your editorial work. It helps satisfy the last of the ADE’s criteria, by explaining to readers just how you produced the copy of the source presented here.
 
 This section should answer such questions as:
 
@@ -62,6 +62,7 @@ This section should answer such questions as:
     Where may they be found today? What is their catalog or other identifying number (DOI, URL) there?
     What procedures and technologies did you use in making your presentation of this artifact?
     Why did you choose them? Are there any limitations of this method that readers should be aware of?
+    How did you produce transcriptions (if any)?
     What kinds of alterations or emendations (if any) have you made? How are they noted?
 
 There is no target word count for this section, as the emphasis here is on maximum precision and clarity.  Be as brief and to the point as you can.
@@ -80,10 +81,12 @@ Please thank your clients, as well as anyone else you would like to thank for th
 
 # Optional: Author Biography
 
-If you wish to include short bios of yourself as authors, please include them here.  This is optional.
+If you wish to include short bios of yourselves as authors, please put them here.  This is optional.
 
 # About MinDoc 1.0
-This site was built using MinDoc 1.0, a prototype digital documentary edition template developed for classroom use by members of [SourceLab](https://sourcelab.history.illinois.edu/) at the University of Illinois Urbana-Champaign.  The original project team included Liza Senatrova, John Randolph, Caroline Kness, and Richard Young.
+_Please leave this credit (eliminating this italicized part)_
+
+> This site was built using MinDoc 1.0, a prototype digital documentary edition template developed for classroom use by members of [SourceLab](https://sourcelab.history.illinois.edu/) at the University of Illinois Urbana-Champaign.  The original project team included Liza Senatrova, John Randolph, Caroline Kness, and Richard Young.
 
 # References
 
