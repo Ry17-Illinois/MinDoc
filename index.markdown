@@ -35,6 +35,8 @@ For the presentation of some sources, it may make sense to break up the presenta
 
 This may also be a space where editorial annotations are provided, such as notes on provenance, archival location, transcription, and more. If possible, a link to the source’s permanent digital location should be included here as well as a citation for that location. This should be done in consultation with the instructors, editorial board, and peer reviewers.
 
+Please note: some presentations may benefit from a multipage format (rather than one scrolling page, as here). I can make a multipage template available to you as needed.
+
 # About this Source
 
 Word count: 1000 words (excluding footnotes)
