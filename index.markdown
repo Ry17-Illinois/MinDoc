@@ -2,8 +2,6 @@
 layout: single_page
 ---
 
-{% assign media = site.mindoc_media | where: "page", "source" | sort: "order" %}
-
 # Introduction
 
 Word count: 250–450 words
@@ -30,6 +28,9 @@ Here and throughout your edition, you should use footnotes in Chicago Notes and 
 # The Source
 
 This section provides the main presentation of your source, as you have prepared it for readers (i.e., a facsimile, transcription, video, audio clip, etc.). This section is where we satisfy the first of the ADE’s three criteria for an electronic edition by providing a rigorous, accurate presentation of historical material.
+
+{% assign media = site.mindoc_media | where: "page", "source" %}
+{% include media_next.html pages=media %}
 
 For the presentation of some sources, it may make sense to break up the presentation into multiple pages. For that, as needed, we can use a more book like template (binding multiple pages together) that I can provide. Nonetheless, this page should be the page from which all presentations of the source itself start.
 
