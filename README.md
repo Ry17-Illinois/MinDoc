@@ -84,20 +84,20 @@ For each image, create a new file in the `_mindoc_media/` folder with the same n
 ```yaml
 ---
 page: source  ## DO NOT CHANGE THIS FIELD
-title: "My Image's Name" 
+title: Penny Magazine Rooks 
 media_type: image
 
-_title: Apple tree
-description: Main page photo
-creator: Unknown
-_date: Unknown
-rights: CC BY
-type: A photo
-source: somewhere
-identifier: 
-contributor:
-format:
-credit_(IPTC):
+_title: Penny Magazine Rooks
+description: A full magazine page image featuring the title "Monthly Supplement of the Penny Magazine of the Society for the Diffusion of Useful Knowledge," and the dates, December 31, 1839, to January 31, 1839. Below this information is an engraving print image of trees with nesting rooks labeled "a rookery," followed by two columns of magazine text.
+creator: Society for the Diffusion of Useful Knowledge
+_date: January 31, 1839
+rights: Public Domain
+type: StillImage
+source: University of Iowa
+identifier: https://babel.hathitrust.org/cgi/pt?id=iau.31858046224600&seq=553 Volume p. 33, Digitization #41
+contributor: Society for the Diffusion of Useful Knowledge
+format: v ill 29 cm, jpg
+credit_(IPTC): Digitization courtesy Google, HathiTrust Digital Library
 date_created_(IPTC):
 
 _path: /assets/img/main_page.jpg ##This field should point to the IMAGE you want to bring into your web page.
