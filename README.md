@@ -99,27 +99,9 @@ order: 1
 In your `index.markdown` file, add this code where you want images to appear:
 
 ```liquid
-{% assign media = site.mindoc_media | where: "page", "first-section" %}
+{% assign media = site.mindoc_media | where: "page", "source" %}
 {% include media_next.html pages=media %}
 ```
-
-Replace `"first-section"` with the page name you used above.
-
----
-
-## Building and Testing Your Site (Technical Reference)
-
-To preview your site locally before publishing:
-```bash
-bundle exec jekyll serve
-```
-Then visit `http://localhost:4000` in your browser.
-
-To build your final site:
-```bash
-bundle exec jekyll build
-```
-
 ---
 
 ## Troubleshooting (FAQ & Common Issues)
