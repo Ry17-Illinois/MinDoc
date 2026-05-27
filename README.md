@@ -49,7 +49,7 @@ Open this file and update:
 title: Your Document Title
 description: by Your Name
 ```
-These will modify those fields on your web page.
+These yaml fields will modify the title and description fields on your web page.
 
 ### Add Your Main Content
 **File:** `index.markdown`
@@ -83,11 +83,29 @@ For each image, create a new file in the `_mindoc_media/` folder with the same n
 
 ```yaml
 ---
-page: "first-section"
-media_type: "image"
-order: 1
+page: source  ## DO NOT CHANGE THIS FIELD
+title: "My Image's Name" 
+media_type: image
+
+_title: Apple tree
+description: Main page photo
+creator: Unknown
+_date: Unknown
+rights: CC BY
+type: A photo
+source: somewhere
+identifier: 
+contributor:
+format:
+credit_(IPTC):
+date_created_(IPTC):
+
+_path: /assets/img/main_page.jpg ##This field should point to the IMAGE you want to bring into your web page.
+order: '03' ##This field determines the order that the image will appear on the page. Start at 01, 02, 03... etc.
+layout: image_description ##DO NOT CHANGE THIS FIELD
 ---
-![A handwritten letter from 1850]({{ site.baseurl }}/assets/img/letter-1850.jpg)
+
+---
 ```
 
 **What each field means:**
