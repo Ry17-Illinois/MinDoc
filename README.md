@@ -120,18 +120,21 @@ In your `index.markdown` file, add this code where you want images to appear:
 {% assign media = site.mindoc_media | where: "page", "source" %}
 {% include media_next.html pages=media %}
 ```
+The first line sets up the ability to call images into the page. It can go anywhere, but you only need to us it once. The second line can be repeated everywhere you want an image. It will add images based on the value in the 'order' field.
 ---
 
 ## Troubleshooting (FAQ & Common Issues)
 
 **Q: My site isn't showing up**
+- Check the Actions tab to see how your deployment is going when you make a change.
 - Wait 2-3 minutes after enabling GitHub Pages for the site to deploy
 - Check that you selected "Main" branch in Settings > Pages
 
 **Q: Images aren't displaying**
+- Make sure that your images are no larger than 1200px by 1920px
 - Check that image filenames match exactly in your `.md` files
 - Verify images are in the `assets/img/` folder
-- Make sure the `page:` name in your image metadata matches your section name
+- Check your liquid code. The second line brings in the actual using the order value in the file metadata. The first line sets this process up. The first line can go anywhere as long as it is before you try calling in an image.
 
 **Q: How do I make edits after publishing?**
 - Edit files directly in GitHub by clicking the pencil icon
@@ -139,23 +142,10 @@ In your `index.markdown` file, add this code where you want images to appear:
 
 ---
 
-## For Educators: README Best Practices Demonstrated Here
-
-This README demonstrates key elements that should appear in any good README:
-
-1. **Clear Title & Overview** (lines 1-5) - Explains what the project is and who it's for
-2. **Getting Started Guide** (lines 7-30) - Step-by-step instructions for beginners
-3. **Usage Examples** (lines 32-70) - Shows how to actually use the tool with code examples
-4. **Technical Reference** (lines 72-81) - Command line instructions for advanced users
-5. **Troubleshooting** (lines 83-95) - Answers common questions and problems
-6. **Clear Organization** - Sections use headers to make scanning easy
-
-**When writing your own READMEs, include these elements to help others understand and use your project.**
-
----
-
 ## Credits
 
-MinDocMini is built on [Jekyll](https://jekyllrb.com/), a static site generator.
+MinDoc is built on [Jekyll](https://jekyllrb.com/), a static site generator.
+
+MinDoc was developed for classroom use by members of SourceLab at the University of Illinois Urbana-Champaign. The original project team included Liza Senatrova, John Randolph, Caroline Kness, and Richard Young.
 
 For more help with Markdown, visit [Markdown Guide](https://www.markdownguide.org/).
