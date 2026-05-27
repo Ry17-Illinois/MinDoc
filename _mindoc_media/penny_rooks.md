@@ -17,6 +17,6 @@ credit_(IPTC): Digitization courtesy Google, HathiTrust Digital Library
 date_created_(IPTC):
 
 _path: /assets/img/penny_rooks.jpg 
-order: 01
+order: '01'
 layout: image_description
 ---
