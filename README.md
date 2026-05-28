@@ -64,11 +64,11 @@ Example:
 ```markdown
 # My Digital Edition
 
-## Collection Overview
-This collection includes photographs and documents from...
+## Edition Overview
+This edition includes photographs and documents from...
 
 ## First Section
-Information about the first theme or time period.
+Information about the first theme or time period...
 ```
 
 ### Add Images to Your Edition
