@@ -120,7 +120,7 @@ In your `index.markdown` file, add this code where you want images to appear:
 {% assign media = site.mindoc_media | where: "page", "source" %}
 {% include media_next.html pages=media %}
 ```
-The first line sets up the ability to call images into the page. It can go anywhere, but you only need to use it once. The second line can be repeated everywhere you want an image. It will add images based on the value in the 'order' field.
+The first line sets up the ability to call images into the page. It can go anywhere, as long as it is before you use the second line and you only need to use it once. The second line can be repeated everywhere you want an image. It will add images based on the value in the 'order' field.
 ---
 
 ## Troubleshooting (FAQ & Common Issues)
