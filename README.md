@@ -1,7 +1,7 @@
 # MinDoc: Create Your Own Digital Documentary Edition
 
 ## What is MinDoc?
-MinDocMini is a minimal computing platform for creating your own digital documentary editions. It makes it easy to quickly deploy a simple static web page where you can display images and text about your project—no coding experience required. This template is designed for students, archivists, and researchers who want to publish digital editions online quickly and freely.
+MinDoc is a minimal computing platform for creating your own digital documentary editions. It makes it easy to quickly deploy a simple static web page where you can display images and text about your project—no coding experience required. This template is designed for students, archivists, and researchers who want to publish digital editions online quickly and freely.
 
 
 ---
@@ -13,8 +13,8 @@ This guide assumes you have **no prior GitHub experience**. If you're already fa
 ### Step 1: Create a GitHub Account
 Sign up for a free GitHub account at [github.com](https://github.com) by selecting the **Sign Up** button at the top of the page.
 
-### Step 2: Create Your Own Copy of MinDocMini
-1. Scroll to the top of the MinDocMini template repository
+### Step 2: Create Your Own Copy of MinDoc
+1. Scroll to the top of the MinDoc template repository
 2. Find the **"Use this template"** button (it looks like this):
 
 <img width="209" height="59" alt="Use this template button" src="https://github.com/user-attachments/assets/5b3fd054-33c7-421f-899f-1083ce44a9e6" />
