@@ -142,6 +142,50 @@ The first line sets up the ability to call images into the page. It can go anywh
 
 ---
 
+## Technical Information
+
+### Tech Stack
+- **HTML**: 61.5% - Markup structure
+- **SCSS**: 25.3% - Styling and theming
+- **Ruby**: 13.2% - Jekyll-based site generation
+
+### Requirements
+- [Git](https://git-scm.com/) for version control
+- [Jekyll](https://jekyllrb.com/) - A static site generator built with Ruby
+- [Ruby](https://www.ruby-lang.org/) 2.7 or higher
+
+### Installation (for developers)
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/your-repository-name.git
+   cd your-repository-name
+   ```
+
+2. Install dependencies:
+   ```bash
+   bundle install
+   ```
+
+3. Run locally:
+   ```bash
+   bundle exec jekyll serve
+   ```
+
+4. Visit `http://localhost:4000` in your browser
+
+### Project Structure
+```
+├── _config.yml          # Site configuration
+├── _mindoc_media/       # Image metadata files
+├── assets/
+│   └── img/            # Image files
+├── _includes/          # HTML template components
+├── _layouts/           # Page layout templates
+├── index.markdown      # Main content file
+└── README.md          # This file
+```
+
 ## Credits
 
 MinDoc is built on [Jekyll](https://jekyllrb.com/), a static site generator.
