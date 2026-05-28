@@ -46,10 +46,10 @@ This section contains a short biography or history of your source. This section 
 
 "About this Source" should answer questions like:
 
-    How, when, and where was this artifact created?
-    For what purpose? To what effect?
-    Who used it, when, where, why?
-    What sorts of histories and historical debates has it been used in? How might we use it in our explorations of the past today?
+- How, when, and where was this artifact created?
+- For what purpose? To what effect?
+- Who used it, when, where, why?
+- What sorts of histories and historical debates has it been used in? How might we use it in our explorations of the past today?
 
 To answer these questions, you will be drawing on your collective research for the Research Assignment.
 
@@ -61,12 +61,12 @@ This section should state the principles and choices that guided your editorial 
 
 This section should answer such questions as:
 
-    What original artifacts or copies of original artifacts were used in the making of your edition? 
-    Where may they be found today? What is their catalog or other identifying number (DOI, URL) there?
-    What procedures and technologies did you use in making your presentation of this artifact?
-    Why did you choose them? Are there any limitations of this method that readers should be aware of?
-    How did you produce transcriptions (if any)?
-    What kinds of alterations or emendations (if any) have you made? How are they noted?
+- What original artifacts or copies of original artifacts were used in the making of your edition? 
+- Where may they be found today? What is their catalog or other identifying number (DOI, URL) there?
+- What procedures and technologies did you use in making your presentation of this artifact?
+- Why did you choose them? Are there any limitations of this method that readers should be aware of?
+- How did you produce transcriptions (if any)?
+- What kinds of alterations or emendations (if any) have you made? How are they noted?
 
 There is no target word count for this section, as the emphasis here is on maximum precision and clarity.  Be as brief and to the point as you can.
 
