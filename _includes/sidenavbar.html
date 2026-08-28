@@ -2,11 +2,16 @@
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="{{ site.baseurl }}{% link index.markdown %}">Home</a>
 
-    {% assign sortedPages = site.pages | sort: 'number' %}
+    {% comment %}
+      Only sort pages that actually have a `number`. Sorting all of
+      site.pages by 'number' fails on GitHub Pages because plugin- and
+      theme-injected pages have no `number`, which makes Liquid fall back
+      to comparing whole page objects (Array vs Array) and error out.
+    {% endcomment %}
+    {% assign numberedPages = site.pages | where_exp: "node", "node.number" %}
+    {% assign sortedPages = numberedPages | sort: 'number' %}
     {% for node in sortedPages %}
-        {% if node.number != null %}
-            <a href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
-        {% endif %}
+        <a href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
     {% endfor %}
 
     <a href="{{ site.baseurl }}{% link search.html %}">Search</a>
