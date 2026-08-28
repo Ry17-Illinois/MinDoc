@@ -1,34 +1,44 @@
+{%- comment -%}
+=====================================================================
+ media.html — renders a set of media items as cards within a section.
+=====================================================================
+ Usage in a section (.md) file:
+
+   {% assign media = site.mindoc_media | sort: "order" | where_exp: "item", "item.page == 'source'" %}
+   {% include media.html pages=media %}
+
+ You do NOT need to filter by media_type. Every format (image, audio,
+ video, dataset, document, text) is handled automatically by
+ media_render.html. Each card shows the item, its core metadata, a link
+ to the full description page, and an optional download link.
+=====================================================================
+{%- endcomment -%}
 
 <main class="main-wrap">
-    <div class="content-wrapper">
-      {% assign media = {{include.pages}} %}
-      {% for element in media %}
-      {% if element.media_type == 'image' %}
-        <div class="container">
-            <img src="{% if element._path contains 'assets' %} {{ site.baseurl }}{{ element._path }} {% else %} {{ element._path }} {% endif %}" class="page_image">
-            <div>
-                <div class="description-wrapper">
-                  <p>Title: {{ element._title }}<br>
-                  Creator: {{ element.creator }}<br>
-                  Date: {{ element._date }}</p>
-                  <a href="{{ site.baseurl }}{{ element.url }}"><button class="description_btn">Detailed description</button></a>
-                </div>
-            </div>
-        </div>
-      {% else %}
+  <div class="content-wrapper">
+    {%- for element in include.pages -%}
       <div class="container">
-        <iframe
-        src="{% if element._path contains 'assets' %} {{ site.baseurl }}{{ element._path }} {% else %} {{ element._path }} {% endif %}" class="page_image"></iframe>
-        <div>
-            <div class="description-wrapper">
-              <p>Title: {{ element._title }}<br>
-              Creator: {{ element.creator }}<br>
-              Date: {{ element._date }}</p>
-              <a href="{{ site.baseurl }}{{ element.url }}"><button class="description_btn">Detailed description</button></a>
-            </div>
+
+        {%- include media_render.html item=element context="card" -%}
+
+        <div class="description-wrapper">
+          <p>Title: {{ element._title }}<br>
+          Creator: {{ element.creator }}<br>
+          Date: {{ element._date }}</p>
+
+          <a href="{{ site.baseurl }}{{ element.url }}"><button class="description_btn">Detailed description</button></a>
+
+          {%- if element.download and element.download != '' -%}
+            {%- if element.download contains 'assets' -%}
+              {%- assign dl = element.download | prepend: site.baseurl -%}
+            {%- else -%}
+              {%- assign dl = element.download -%}
+            {%- endif -%}
+            <a class="media-download" href="{{ dl | strip }}" download>Download</a>
+          {%- endif -%}
         </div>
-    </div>
-      {% endif %}
-      {% endfor %}
-    </div>
+
+      </div>
+    {%- endfor -%}
+  </div>
 </main>

@@ -1,0 +1,19 @@
+{
+  "ai_models": {
+    "openai_enabled": false,
+    "openai_api_key": "",
+    "ollama_enabled": false,
+    "ollama_model": "gemma3"
+  },
+  "ocr_engines": {
+    "easyocr_enabled": true,
+    "tesseract_enabled": true,
+    "pypdf2_enabled": true,
+    "openai_ocr_enabled": false,
+    "ollama_ocr_enabled": false
+  },
+  "ui_settings": {
+    "window_geometry": "1920x1009+446+111",
+    "last_directory": ""
+  }
+}

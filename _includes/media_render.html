@@ -1,0 +1,79 @@
+{%- comment -%}
+=====================================================================
+ media_render.html — the single renderer for one media item.
+=====================================================================
+ Routes on `media_type` to the right HTML for that format. This is the
+ ONLY place that knows how each format is displayed. To support a new
+ format, add one more `when` branch here — nothing else changes.
+
+ Parameters:
+   include.item     (required) a media document from site.mindoc_media
+   include.context  (optional) "card" (default) for section grids,
+                    or "full" for the standalone detail page.
+
+ Fields read from the item:
+   media_type  one of: image, audio, video, dataset, document, text
+   _path       path to the file to display. If it contains "assets" it
+               is treated as a local file and prefixed with site.baseurl;
+               otherwise it is used as-is (external URL / embed).
+   _title, creator, _date, description  (metadata, shown by callers)
+=====================================================================
+{%- endcomment -%}
+
+{%- assign item = include.item -%}
+{%- assign context = include.context | default: 'card' -%}
+
+{%- comment -%} Resolve the source path: local asset vs external URL. {%- endcomment -%}
+{%- if item._path contains 'assets' -%}
+  {%- assign src = item._path | prepend: site.baseurl -%}
+{%- else -%}
+  {%- assign src = item._path -%}
+{%- endif -%}
+{%- assign src = src | strip -%}
+
+{%- case item.media_type -%}
+
+{%- when 'image' -%}
+  <img src="{{ src }}" class="page_image media-image" alt="{{ item._title | escape }}">
+
+{%- when 'audio' -%}
+  <audio class="media-audio" controls preload="metadata" src="{{ src }}">
+    Your browser does not support the audio element. Use the download link below to listen.
+  </audio>
+
+{%- when 'video' -%}
+  {%- comment -%} Local file gets a native player; an embed URL gets an iframe. {%- endcomment -%}
+  {%- if item._path contains 'assets' -%}
+    <video class="media-video" controls preload="metadata" src="{{ src }}">
+      Your browser does not support the video element. Use the download link below to watch.
+    </video>
+  {%- else -%}
+    <iframe class="media-embed" src="{{ src }}" allowfullscreen
+      title="{{ item._title | escape }}"></iframe>
+  {%- endif -%}
+
+{%- when 'dataset' -%}
+  <div class="media-dataset">
+    <span class="media-dataset-icon" aria-hidden="true">&#128202;</span>
+    <p class="media-dataset-label">Dataset: {{ item._title | escape }}</p>
+    {%- if item.download or item._path -%}
+      <a class="media-download" href="{% if item.download %}{% if item.download contains 'assets' %}{{ item.download | prepend: site.baseurl }}{% else %}{{ item.download }}{% endif %}{% else %}{{ src }}{% endif %}" download>Download dataset</a>
+    {%- endif -%}
+  </div>
+
+{%- when 'document' -%}
+  {%- comment -%} Documents (PDF, etc.) preview in an iframe when possible. {%- endcomment -%}
+  <iframe class="media-document" src="{{ src }}" title="{{ item._title | escape }}"></iframe>
+
+{%- when 'text' -%}
+  <div class="media-text">
+    {{ item.content | default: item.description }}
+  </div>
+
+{%- else -%}
+  {%- comment -%} Unknown type: fall back to a link so nothing is silently lost. {%- endcomment -%}
+  <p class="media-unknown">
+    <a href="{{ src }}">{{ item._title | default: item._path }}</a>
+  </p>
+
+{%- endcase -%}

@@ -1,12 +1,20 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <meta charset = "UTF-8">
-        <title>{{ site.title }}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ page.title | default: site.title }} &middot; {{ site.title }}</title>
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
     </head>
     <body>
-        <div class="single-page-content">
+        {% include header.html %}
+
+        {% include sidenavbar.html %}
+
+        <div class="content">
             {{ content }}
         </div>
+
+        <script src="{{ site.baseurl }}{% link assets/js/nav.js %}"></script>
     </body>
 </html>

@@ -1,5 +1,10 @@
 <header class="header">
-    <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+    <h1><a href="{{ site.baseurl }}{% link index.markdown %}">{{ site.title }}</a></h1>
     <p>{{ site.description }}</p>
     <hr>
+    <div id="search_icon">
+        <a href="{{ site.baseurl }}{% link search.html %}">
+            <img src="{{ site.baseurl }}/assets/img/search_icon.png" width="30" height="30" alt="Search">
+        </a>
+    </div>
 </header>

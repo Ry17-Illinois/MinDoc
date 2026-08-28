@@ -1,30 +1,32 @@
 ---
 layout: default
 ---
-  <body>
-    <div class="img_description">
-      <div class="image">
-        {% if page.media_type == 'image' %}
-        <img src="{% if page._path contains 'assets' %} {{ site.baseurl }}{{ page._path }} {% else %} {{ page._path }} {% endif %}">
-        {% else %}
-        <iframe
-        src="{% if page._path contains 'assets' %} {{ page.baseurl }}{{ page._path }} {% else %} {{ page._path }} {% endif %}" class="page_image"></iframe>
-        {% endif %}
-      </div>
-      <div class="text">
-        <h1>{{ page._title }}</h1>
-          <p><i>{{ page.description }}</i></p>
-          <p>Creator: {{ page.creator }}</p>
-          <p>Date: {{ page._date }}</p>
-          <p>{{ page.rights }}</p>
-          <p>Type: {{ page.type }}</p>
-          <p>Source: {{ page.source }}</p>
-          <p>{{ page.identifier }}</p>
-          <p>{{ page.contributor }}</p>
-          <p>{{ page.format }}</p>
-          <p>{{ page.credit_IPTC }}</p>
-          <p>{{ page.date_created_IPTC }}</p>
-      </div>
-    </div>
-  </body>
-</html>
+<div class="img_description">
+  <div class="image">
+    {%- include media_render.html item=page context="full" -%}
+
+    {%- if page.download and page.download != '' -%}
+      {%- if page.download contains 'assets' -%}
+        {%- assign dl = page.download | prepend: site.baseurl -%}
+      {%- else -%}
+        {%- assign dl = page.download -%}
+      {%- endif -%}
+      <p><a class="media-download" href="{{ dl | strip }}" download>Download this source</a></p>
+    {%- endif -%}
+  </div>
+
+  <div class="text">
+    <h1>{{ page._title }}</h1>
+    {%- if page.description and page.description != '' %}<p><i>{{ page.description }}</i></p>{% endif -%}
+    {%- if page.creator and page.creator != '' %}<p>Creator: {{ page.creator }}</p>{% endif -%}
+    {%- if page._date and page._date != '' %}<p>Date: {{ page._date }}</p>{% endif -%}
+    {%- if page.rights and page.rights != '' %}<p>Rights: {{ page.rights }}</p>{% endif -%}
+    {%- if page.type and page.type != '' %}<p>Type: {{ page.type }}</p>{% endif -%}
+    {%- if page.source and page.source != '' %}<p>Source: {{ page.source }}</p>{% endif -%}
+    {%- if page.identifier and page.identifier != '' %}<p>Identifier: {{ page.identifier }}</p>{% endif -%}
+    {%- if page.contributor and page.contributor != '' %}<p>Contributor: {{ page.contributor }}</p>{% endif -%}
+    {%- if page.format and page.format != '' %}<p>Format: {{ page.format }}</p>{% endif -%}
+    {%- if page.credit_IPTC and page.credit_IPTC != '' %}<p>Credit (IPTC): {{ page.credit_IPTC }}</p>{% endif -%}
+    {%- if page.date_created_IPTC and page.date_created_IPTC != '' %}<p>Date created (IPTC): {{ page.date_created_IPTC }}</p>{% endif -%}
+  </div>
+</div>
